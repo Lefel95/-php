@@ -8,12 +8,13 @@
 <body>
 <div>
     <?php
-        $nome = $_POST["nome"];
-        $nasc = $_POST["nascimento"];
-        $sex = $_POST["sexo"];
+        $nome = isset($_POST["nome"])?$_POST["nome"]:"[não informado]";
+        $nasc = isset($_POST["nascimento"])?$_POST["nascimento"]:date("Y");
+        $sex = isset($_POST["sexo"])?$_POST["sexo"]:"[sem sexo]";
         $idade = date("Y") - $nasc;
         echo "$nome tem $idade anos e pertence ao sexo $sex";
     ?>
+    <br>
     <a href="idade.html"><input type="button" name="back" value="Voltar"></a>
 </div>
 </body>
