@@ -8,7 +8,11 @@
 <body>
 <div>
     <?php
-
+      $r = 10;
+      while ($r >= 1) {
+        echo $r."<br>";
+        $r--;
+      }
     ?>
 </div>
 </body>

@@ -8,6 +8,17 @@
 <body>
 <div>
     <?php
+      $c = $_POST["var"];
+      $i = 1;
+
+      while ($i <= $c) {
+        $f = "num".$i;
+        $url = "n".$i;
+        $$f = $_POST[$url];
+        echo "Valor $i: ".$$f."<br>";
+        $i++;
+      }
+
 
     ?>
 </div>
